@@ -147,6 +147,13 @@ async function fetchEvents() {
 /* ─────────────────────────────────────────────────────────────
    HELPERS
    ───────────────────────────────────────────────────────────── */
+// Converts standard Google Drive share links to raw direct image source URLs
+function getDirectImageUrl(url) {
+  if (!url) return '';
+  const match = url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+  return match ? `https://docs.google.com/uc?export=view&id=${match[1]}` : url;
+}
+
 function formatDate(isoDate) {
   if (!isoDate) return '';
   const [year, month, day] = isoDate.split('-').map(Number);
@@ -222,8 +229,10 @@ function renderModalContent(evt) {
   const isPast = evt.status === 'past';
   const bring = evt.what_to_bring ? evt.what_to_bring.split(',').map(s => s.trim()).filter(Boolean) : [];
   const partners = evt.partner_names ? evt.partner_names.split(',').map(s => s.trim()).filter(Boolean) : [];
-  const hasPhoto1 = evt.photo_1 && evt.photo_1.startsWith('http');
-  const hasPhoto2 = evt.photo_2 && evt.photo_2.startsWith('http');
+  const photo1Url = getDirectImageUrl(evt.photo_1);
+  const photo2Url = getDirectImageUrl(evt.photo_2);
+  const hasPhoto1 = photo1Url && photo1Url.startsWith('http');
+  const hasPhoto2 = photo2Url && photo2Url.startsWith('http');
   const hasPhotos = hasPhoto1 || hasPhoto2;
 
   let html = `
@@ -283,8 +292,8 @@ function renderModalContent(evt) {
 
   if (isPast && hasPhotos) {
     html += `<p class="modal-section-title">Photos</p><div class="modal-photos">`;
-    if (hasPhoto1) html += `<img class="modal-photo" src="${evt.photo_1}" alt="Event photo 1" loading="lazy" />`;
-    if (hasPhoto2) html += `<img class="modal-photo" src="${evt.photo_2}" alt="Event photo 2" loading="lazy" />`;
+    if (hasPhoto1) html += `<img class="modal-photo" src="${photo1Url}" alt="Event photo 1" loading="lazy" />`;
+    if (hasPhoto2) html += `<img class="modal-photo" src="${photo2Url}" alt="Event photo 2" loading="lazy" />`;
     html += `</div>`;
   }
 
