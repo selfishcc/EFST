@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Everflow Sanctuary is a 501(c)(3) nonprofit in the San Francisco Bay Area — cultivating harmony between nature, mindfulness, and community through hikes, cleanups, and mindful outdoor events." />
+  <meta property="og:title" content="Everflow Sanctuary | Nature. Mindfulness. Community." />
+  <meta property="og:description" content="Hike. Clean up. Find your flow. All in one experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-bg.jpg" />
+  <title>Everflow Sanctuary | Nature. Mindfulness. Community.</title>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Everflow Sanctuary",
+    "description": "A 501(c)(3) nonprofit cultivating harmony between nature, mindfulness, and community in the San Francisco Bay Area.",
+    "email": "everflow.sanctuary@gmail.com",
+    "sameAs": ["https://www.instagram.com/everflow.sanctuary/"],
+    "areaServed": "San Francisco Bay Area"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo-link" aria-label="Everflow Sanctuary — Home">
+        <img src="everflow logo_0309_color exploration.png" alt="Everflow Sanctuary" class="nav__logo" />
+      </a>
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#events" class="nav__link">Events</a>
+        <a href="#get-involved" class="nav__link">Get Involved</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="https://www.instagram.com/everflow.sanctuary/" target="_blank" rel="noopener noreferrer" class="nav__ig-link" aria-label="Follow us on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#get-involved" class="btn btn--accent btn--sm">Donate</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobile-menu" aria-hidden="true">
+      <a href="#about" class="nav__mobile-link">About</a>
+      <a href="#events" class="nav__mobile-link">Events</a>
+      <a href="#get-involved" class="nav__mobile-link">Get Involved</a>
+      <a href="#contact" class="nav__mobile-link">Contact</a>
+      <a href="mailto:everflow.sanctuary@gmail.com" class="nav__mobile-link">everflow.sanctuary@gmail.com</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero" aria-label="Welcome to Everflow Sanctuary">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">San Francisco Bay Area</p>
+        <h1 class="hero__title">Restore.<br>Reconnect.<br>Renew.</h1>
+        <p class="hero__subtitle">Hike. Clean up. Find your flow.<br>All in one experience.</p>
+        <div class="hero__ctas">
+          <a href="#events" class="btn btn--primary btn--lg" id="hero-join-btn">Join an Event</a>
+          <a href="#about" class="btn btn--outline-white btn--lg" id="hero-mission-btn">Our Mission</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== MISSION ===== -->
+    <section id="about" class="mission" aria-labelledby="mission-heading">
+      <div class="container mission__inner">
+        <div class="mission__left reveal">
+          <span class="label">About Us</span>
+          <h2 class="mission__heading" id="mission-heading">Where Movement<br>Meets Purpose</h2>
+        </div>
+        <div class="mission__right reveal">
+          <p class="mission__text">Everflow Sanctuary is a 501(c)(3) nonprofit dedicated to cultivating a harmonious balance between nature, mindfulness, and community in the San Francisco Bay Area and beyond.</p>
+          <p class="mission__text">We bring people together through activities that foster environmental stewardship, spiritual connection, and social responsibility — from waterway cleanups to meditative walks, all woven into a single, transformative experience.</p>
+        </div>
+      </div>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f0f7f5"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== EVERFLOW EXPERIENCE ===== -->
+    <section id="experience" class="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="experience__header reveal">
+          <span class="label label--teal">How It Works</span>
+          <h2 class="experience__title" id="experience-heading">The Everflow Experience</h2>
+          <p class="experience__subtitle">Every event combines three transformations into a single day in nature.</p>
+        </div>
+
+        <div class="experience__flow">
+          <!-- Card 1: Move -->
+          <div class="experience__card reveal" id="exp-move">
+            <div class="experience__num" aria-hidden="true">01</div>
+            <div class="experience__icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M6 20l2-6 2 3 2-8 2 5 2-3"/><path d="M7 12l5-7 5 7"/></svg>
+            </div>
+            <h3 class="experience__card-title">Move</h3>
+            <p class="experience__card-desc">Hit the trail. We hike, walk, or paddle through the Bay Area's most beautiful natural spaces — moving with intention, not just for exercise.</p>
+          </div>
+
+          <div class="experience__arrow" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+
+          <!-- Card 2: Restore -->
+          <div class="experience__card experience__card--featured reveal" id="exp-restore">
+            <div class="experience__num" aria-hidden="true">02</div>
+            <div class="experience__icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 3v4c0 2.2 1.8 4 4 4h2"/><path d="M19 3v4c0 2.2-1.8 4-4 4h-2"/><path d="M2 12c2 0 4 1 6 3s4 3 6 3 4-1 6-3"/></svg>
+            </div>
+            <h3 class="experience__card-title">Restore</h3>
+            <p class="experience__card-desc">Clean as you go. Pick up trash, remove invasive plants, and actively restore the land and waterways you're moving through. Leave it better than you found it.</p>
+          </div>
+
+          <div class="experience__arrow" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+
+          <!-- Card 3: Flow -->
+          <div class="experience__card reveal" id="exp-flow">
+            <div class="experience__num" aria-hidden="true">03</div>
+            <div class="experience__icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4-2-8-6-8-11a8 8 0 0 1 16 0c0 5-4 9-8 11z"/><path d="M12 8v4l2 2"/></svg>
+            </div>
+            <h3 class="experience__card-title">Flow</h3>
+            <p class="experience__card-desc">End in stillness. Close every event with group yoga, guided meditation, or breathwork — right there in nature where the work was done.</p>
+          </div>
+        </div>
+
+        <p class="experience__tagline reveal">
+          <span>Every Everflow event.</span>
+          <span class="experience__tagline-em">Every time.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== IMPACT STATS ===== -->
+    <section class="impact" aria-label="Our Impact">
+      <div class="container impact__inner">
+        <div class="impact__stat reveal">
+          <div class="impact__value">
+            <span class="impact__number" data-target="50">0</span>
+            <span class="impact__suffix">+</span>
+          </div>
+          <p class="impact__label">Volunteers</p>
+        </div>
+        <div class="impact__divider" aria-hidden="true"></div>
+        <div class="impact__stat reveal">
+          <div class="impact__value">
+            <span class="impact__number" data-target="400">0</span>
+            <span class="impact__suffix">lbs</span>
+          </div>
+          <p class="impact__label">Trash Removed</p>
+        </div>
+        <div class="impact__divider" aria-hidden="true"></div>
+        <div class="impact__stat reveal">
+          <div class="impact__value">
+            <span class="impact__number" data-target="3">0</span>
+          </div>
+          <p class="impact__label">Events Hosted</p>
+        </div>
+        <div class="impact__divider" aria-hidden="true"></div>
+        <div class="impact__stat reveal">
+          <div class="impact__value">
+            <span class="impact__number" data-target="2">0</span>
+          </div>
+          <p class="impact__label">Partner Organizations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS ===== -->
+    <section id="events" class="events" aria-labelledby="events-heading">
+      <div class="container">
+        <div class="events__header reveal">
+          <span class="label">Events</span>
+          <h2 class="events__title" id="events-heading">Join Us Outside</h2>
+          <p class="events__subtitle">Every event is a hike, a cleanup, and a moment of stillness — all in one.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="events__tabs" role="tablist" aria-label="Filter events by status">
+          <button
+            class="events__tab events__tab--active"
+            role="tab"
+            id="tab-upcoming"
+            aria-selected="true"
+            aria-controls="panel-upcoming"
+            data-tab="upcoming"
+          >Upcoming Events</button>
+          <button
+            class="events__tab"
+            role="tab"
+            id="tab-past"
+            aria-selected="false"
+            aria-controls="panel-past"
+            data-tab="past"
+          >Past Events</button>
+        </div>
+
+        <!-- Upcoming Panel -->
+        <div class="events__panel" id="panel-upcoming" role="tabpanel" aria-labelledby="tab-upcoming">
+          <div class="events__grid" id="grid-upcoming">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Past Panel -->
+        <div class="events__panel events__panel--hidden" id="panel-past" role="tabpanel" aria-labelledby="tab-past">
+          <div class="events__grid" id="grid-past">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GET INVOLVED ===== -->
+    <section id="get-involved" class="get-involved" aria-labelledby="involved-heading">
+      <div class="container">
+        <div class="get-involved__header reveal">
+          <span class="label label--teal">Take Action</span>
+          <h2 class="get-involved__title" id="involved-heading">Join the Movement</h2>
+        </div>
+        <div class="get-involved__grid">
+
+          <div class="gi-card reveal" id="gi-volunteer">
+            <div class="gi-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="gi-card__title">Volunteer</h3>
+            <p class="gi-card__text">Show up, move your body, restore the earth, and find your flow — alongside a community that genuinely cares.</p>
+            <a href="#events" class="btn btn--primary" id="gi-see-events">See Events</a>
+          </div>
+
+          <div class="gi-card gi-card--featured reveal" id="gi-donate">
+            <div class="gi-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="gi-card__title">Donate</h3>
+            <p class="gi-card__text">Your contribution covers event supplies, park permits, and helps us expand our reach across the Bay Area. Fully tax-deductible as a 501(c)(3).</p>
+            <a href="mailto:everflow.sanctuary@gmail.com?subject=Donation%20Inquiry" class="btn btn--accent" id="gi-donate-btn">Donate Today</a>
+          </div>
+
+          <div class="gi-card reveal" id="gi-follow">
+            <div class="gi-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <h3 class="gi-card__title">Follow Along</h3>
+            <p class="gi-card__text">Stay updated on events, see photos from our adventures, and become part of our growing Bay Area community on Instagram.</p>
+            <a href="https://www.instagram.com/everflow.sanctuary/" target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="gi-instagram">@everflow.sanctuary</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container contact__inner reveal">
+        <span class="label label--light">Reach Out</span>
+        <h2 class="contact__title" id="contact-heading">Get in Touch</h2>
+        <p class="contact__text">Questions about events, corporate partnerships, or how to get involved? We'd love to hear from you.</p>
+        <div class="contact__links">
+          <a href="mailto:everflow.sanctuary@gmail.com" class="contact__link" id="contact-email">
+            <span class="contact__link-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            everflow.sanctuary@gmail.com
+          </a>
+          <a href="https://www.instagram.com/everflow.sanctuary/" target="_blank" rel="noopener noreferrer" class="contact__link" id="contact-instagram">
+            <span class="contact__link-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            @everflow.sanctuary
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="everflow logo_0309_white logo.png" alt="Everflow Sanctuary" class="footer__logo" />
+        <p class="footer__tagline">Nature. Mindfulness. Community.</p>
+        <p class="footer__legal">Everflow Sanctuary is a 501(c)(3) nonprofit.<br>All donations are tax-deductible to the fullest extent of the law.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#about" class="footer__link">About</a>
+        <a href="#experience" class="footer__link">The Experience</a>
+        <a href="#events" class="footer__link">Events</a>
+        <a href="#get-involved" class="footer__link">Get Involved</a>
+        <a href="#contact" class="footer__link">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <p class="footer__social-label">Follow Us</p>
+        <a href="https://www.instagram.com/everflow.sanctuary/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Everflow Sanctuary. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== EVENT MODAL ===== -->
+  <dialog class="event-modal" id="event-modal" aria-modal="true">
+    <div class="event-modal__inner">
+      <button class="event-modal__close" id="modal-close" aria-label="Close event details">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modal-content" class="event-modal__content">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </dialog>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might be created by editors or OS
+*.local
+Thumbing.db
+ehthumbs.db
+Desktop.ini
