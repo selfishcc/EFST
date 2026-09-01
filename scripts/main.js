@@ -200,11 +200,15 @@ function renderEventCard(evt) {
   const tags = parseTags(evt.tags);
   const date = formatDate(evt.date);
   const isPast = evt.status === 'past';
+  const isPrivate = (evt.visibility || '').toLowerCase() === 'private';
 
   return `
-    <article class="event-card" data-event-id="${evt.id}" aria-label="${evt.title}">
+    <article class="event-card${isPrivate ? ' event-card--private' : ''}" data-event-id="${evt.id}" aria-label="${evt.title}">
       <div class="event-card__top">
-        <div class="event-card__tags">${renderTags(tags)}</div>
+        <div class="event-card__tags">
+          ${isPrivate ? '<span class="event-tag event-tag--private">Invite Only</span>' : ''}
+          ${renderTags(tags)}
+        </div>
         <h3 class="event-card__title">${evt.title}</h3>
         <div class="event-card__meta">
           <div class="event-card__date">
@@ -303,7 +307,11 @@ function renderModalContent(evt) {
     html += `</div>`;
   }
 
-  if (!isPast && evt.rsvp_link) {
+  const isPrivate = (evt.visibility || '').toLowerCase() === 'private';
+
+  if (!isPast && isPrivate) {
+    html += `<div class="modal-private-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Event · Invite Only</div>`;
+  } else if (!isPast && evt.rsvp_link) {
     html += `<a href="${evt.rsvp_link}" target="_blank" rel="noopener noreferrer" class="btn btn--accent modal-cta">Register on Luma →</a>`;
   } else if (!isPast) {
     html += `<a href="mailto:everflow.sanctuary@gmail.com?subject=Event%20Inquiry%3A%20${encodeURIComponent(evt.title)}" class="btn btn--accent modal-cta">Contact Us to Register</a>`;

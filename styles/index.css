@@ -1158,6 +1158,32 @@ button { cursor: pointer; font-family: var(--font-body); }
   margin-top: 0.5rem;
 }
 
+/* Private event tag on cards */
+.event-tag--private {
+  background: rgba(148, 130, 110, 0.15);
+  color: #a89279;
+  border: 1px solid rgba(148, 130, 110, 0.3);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Private event badge in modal */
+.modal-private-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(148, 130, 110, 0.1);
+  border: 1px solid rgba(148, 130, 110, 0.25);
+  color: #a89279;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 /* ---------- 15. ANIMATIONS ---------- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
