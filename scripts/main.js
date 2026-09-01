@@ -150,8 +150,14 @@ async function fetchEvents() {
 // Converts standard Google Drive share links to raw direct image source URLs
 function getDirectImageUrl(url) {
   if (!url) return '';
+  // Extract Google Drive file ID from various link formats
   const match = url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
-  return match ? `https://docs.google.com/uc?export=view&id=${match[1]}` : url;
+  if (match) {
+    // Use the thumbnail endpoint with a large size — the old uc?export=view
+    // endpoint is deprecated and returns an HTML page instead of the image
+    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1600`;
+  }
+  return url;
 }
 
 function formatDate(isoDate) {
